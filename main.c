@@ -21,9 +21,33 @@ void useless_function()
     printf("[useless_function] Doing useless stuff\n");
 }
 
+void open_and_display(const char *filename)
+{
+    FILE *f = fopen(filename, "r");
+    if (f == NULL)
+    {
+        printf("error opening file %s\n", filename);
+        exit(-1);
+    }
+
+    char c;
+    while ((c = fgetc(f)) != EOF)
+    {
+        printf("%c", c);
+    }
+
+    fclose(f);
+}
+
+void welcome()
+{
+    open_and_display("./_ascii_art.txt");
+    printf("Test APP\n");
+}
+
 int main()
 {
-    printf("Welcome to my app!\n");
+    welcome();
 
     int num1, num2;
     printf("Check out my addition skills!\n");
