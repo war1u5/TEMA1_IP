@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int add_numbers(int a, int b)
 {
@@ -13,7 +14,11 @@ int sub_numbers(int a, int b)
 
 void useless_function()
 {
-    ;
+    for (int i = 0; i < 100000; i++)
+    {
+        ;
+    }
+    printf("[useless_function] Doing useless stuff\n");
 }
 
 int main()
@@ -38,7 +43,11 @@ int main()
     printf("\n%d - %d = %d\n", num1, num2, diff);
 
     printf("Calling this useless function for no reason\n");
+    clock_t start_time = clock();
     useless_function();
+    clock_t end_time = clock();
+    double time_taken = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
+    printf("I wasted %.6f seconds of your time\n", time_taken);
 
     return 0;
 }
