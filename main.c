@@ -80,6 +80,7 @@ int main()
         printf("%d ", i);
         sleep(1);
     }
+    printf("\nGoodbye!");
 
     return 0;
 }
