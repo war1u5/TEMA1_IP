@@ -6,6 +6,11 @@ int add_numbers(int a, int b)
     return a + b;
 }
 
+int sub_numbers(int a, int b)
+{
+    return a - b;
+}
+
 int main()
 {
     printf("Welcome to my app!\n");
@@ -21,6 +26,11 @@ int main()
 
     int sum = add_numbers(num1, num2);
     printf("\n%d + %d = %d\n", num1, num2, sum);
+
+    printf("I can also subtract numbers!\n");
+
+    int diff = sub_numbers(num1, num2);
+    printf("\n%d - %d = %d\n", num1, num2, diff);
 
     return 0;
 }
