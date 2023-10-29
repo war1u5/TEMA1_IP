@@ -11,6 +11,11 @@ int sub_numbers(int a, int b)
     return a - b;
 }
 
+void useless_function()
+{
+    ;
+}
+
 int main()
 {
     printf("Welcome to my app!\n");
@@ -31,6 +36,9 @@ int main()
 
     int diff = sub_numbers(num1, num2);
     printf("\n%d - %d = %d\n", num1, num2, diff);
+
+    printf("Calling this useless function for no reason\n");
+    useless_function();
 
     return 0;
 }
