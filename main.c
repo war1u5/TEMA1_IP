@@ -73,5 +73,13 @@ int main()
     double time_taken = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
     printf("I wasted %.6f seconds of your time\n", time_taken);
 
+    printf("Time to say goodbye...\n");
+    printf("Terminating in: ");
+    for (int i = 3; i >= 0; i--)
+    {
+        printf("%d ", i);
+        sleep(1);
+    }
+
     return 0;
 }
