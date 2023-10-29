@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+void welcome()
 {
     printf("Welcome to my app!\n");
+}
+
+int main()
+{
+    welcome();
 
     return 0;
 }
